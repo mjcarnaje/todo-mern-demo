@@ -1,11 +1,18 @@
-const express = require("express");
+import express from "express";
+
 const app = express();
-const port = 3000;
+
+connectDb();
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+app.use(express.json());
+app.use(cors());
+
+app.use("/api/tasks", tasks);
+
+const port = process.env.PORT || 4000;
+
+app.listen(port, () => console.log(`Listening on port ${port}...`));
