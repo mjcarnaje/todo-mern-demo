@@ -1,4 +1,4 @@
-import Tast from "../models/task";
+import Task from "../models/task";
 import express from "express";
 
 const router = express.Router();

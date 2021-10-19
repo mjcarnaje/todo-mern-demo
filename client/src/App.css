@@ -19,11 +19,18 @@
   flex: 1;
 }
 
-.task-delete {
+.task-button {
   width: 26px;
   height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hide {
   display: hidden;
+}
+
+.button-container {
+  display: flex;
 }
